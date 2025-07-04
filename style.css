@@ -1,181 +1,250 @@
-/* body {
-  padding: 0;
+/* CSS Custom Properties */
+:root {
+  /* Colors */
+  --color-primary: hsl(14, 45%, 36%);
+  --color-secondary: #991b47;
+  --color-background: #f5f5dc;
+  --color-card-bg: #fff5f9;
+  --color-border: #f5f5dc;
+  --color-text: hsl(14, 45%, 36%);
+  --color-link: hsl(228, 45%, 44%);
+
+  /* Typography */
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Young Serif", serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-xxl: 3rem;
+
+  /* Border radius */
+  --border-radius: 14px;
+
+  /* Breakpoints */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+}
+
+/* Reset and base styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   scroll-behavior: smooth;
 }
+
 .overall-body {
-  background-color: #f5f5dc;
+  background-color: var(--color-background);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: var(--spacing-lg);
 }
 
+/* Card layout */
 .card {
-  width: 40%;
-  padding: 30px;
+  width: 100%;
+  max-width: 40rem;
+  padding: var(--spacing-xl);
   background-color: white;
-  align-items: center;
-  border-radius: 14px;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 
+/* Card image */
 .card-img {
   width: 100%;
   display: block;
-  border-radius: 14px;
+  border-radius: var(--border-radius);
   object-fit: cover;
-  align-items: center;
-  margin-left: 0px;
 }
+
+/* Card content */
 .card-title {
-  font-family: "Young Serif", serif;
-  font-size: 35px;
-  font-weight: 400px;
-  margin-top: 40px;
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-top: var(--spacing-xl);
+  color: var(--color-text);
 }
+
 .card-description {
-  color: hsl(14, 45%, 36%);
-  font-size: 16px;
-  font-weight: 500px;
-  font-family: "Outfit", sans-serif;
-  margin-bottom: 2.5rem;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
 }
+
+/* Preparation time section */
 .card-subtitle-div {
-  background-color: #fff5f9;
-  border-radius: 14px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 25px;
-  padding-top: 20px;
-  border: 1px solid #f5f5dc;
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-border);
 }
+
 .card-subtitle {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-primary);
   font-size: 1.25rem;
-  font-weight: 500px;
-  margin-top: 0%;
-  color: #991b47;
-  padding-left: 20px;
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-secondary);
 }
+
 .card-subtitle-div ul {
   margin: 0;
   list-style-type: disc;
-  padding-left: 3rem;
+  padding-left: var(--spacing-xxl);
 }
+
 .card-subtitle-div li {
-  margin-bottom: 6px;
-  font-family: "Outfit", sans-serif;
-  color: hsl(14, 45%, 36%);
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-primary);
+  color: var(--color-text);
   line-height: 1.5;
-  padding-left: 1.5rem;
-  font-weight: 200px;
+  padding-left: var(--spacing-md);
+  font-weight: 300;
 }
-.Ingredients {
-  margin-top: 35px;
+
+/* Section styles */
+.ingredients,
+.instructions,
+.nutrition {
+  margin-top: var(--spacing-xl);
 }
-.Ingredients-title {
-  font-family: "Young Serif", serif;
-  font-size: 25px;
-  color: hsl(14, 45%, 36%);
-  font-weight: 700px;
+
+.ingredients-title,
+.instructions-title,
+.nutrition-title {
+  font-family: var(--font-secondary);
+  font-size: 1.6rem;
+  color: var(--color-text);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
 }
-.Ingredients-list {
-  font-family: "Outfit", sans-serif;
-  line-height: 2.5rem;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
+
+.ingredients-list,
+.instructions-list {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
-.Ingredients-list li {
-  padding-left: 1.5rem;
-  color: hsl(14, 45%, 36%);
-  font-weight: 500px;
+
+.ingredients-list li {
+  padding-left: var(--spacing-md);
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
 }
-.Instructions {
-  margin-top: 25px;
+
+.instructions-list li {
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
 }
-.Instructions-title {
-  font-family: "Young Serif", serif;
-  font-size: 25px;
-  color: hsl(14, 45%, 36%);
-  font-weight: 700px;
+
+/* Nutrition section */
+.nutrition-description {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
 }
-.Instructions-list {
-  font-family: "Outfit", sans-serif;
-  line-height: 1.5rem;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-}
-.Instructions-list li {
-  padding-left: 1.7rem;
-  margin-bottom: 0.5rem;
-  color: hsl(14, 45%, 36%);
-}
-.Nutrition {
-  margin-top: 25px;
-}
-.Nutrition-title {
-  font-family: "Young Serif", serif;
-  font-size: 25px;
-  color: hsl(14, 45%, 36%);
-  font-weight: 700px;
-  margin-bottom: 1.5rem;
-}
-.Nutrition-description {
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
-  color: hsl(14, 45%, 36%);
-  font-weight: 500px;
-  margin-bottom: 2rem;
-}
-.Nutrition-table {
+
+.nutrition-table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-xs);
 }
-.Nutrition-table p {
-  font-family: "Outfit", sans-serif;
+
+.nutrition-table p {
+  font-family: var(--font-primary);
   width: 50%;
-  color: hsl(14, 45%, 36%);
-  margin-bottom: 10px;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
 }
 
-@media (max-width: 444px) {
+/* Attribution */
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.attribution a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--spacing-lg) 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .overall-body {
+    padding: var(--spacing-sm);
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+    margin: 0;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
   .card-subtitle-div {
-    margin-top: 0;
-    margin-left: -30px;
-    margin-right: -30px;
-    padding-left: 55px;
-    padding-right: 55px;
+    margin-left: calc(-1 * var(--spacing-lg));
+    margin-right: calc(-1 * var(--spacing-lg));
     border-radius: 0;
-    padding-left: 1.5rem;
-  }
-}
-@media (max-width: 502px) {
-  .card {
-    width: 100px;
-    margin-top: 0;
-    margin-bottom: 0;
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
   }
 }
 
-@media (max-width: 1004px) {
+@media (max-width: 480px) {
   .card {
-    width: 80%;
+    padding: var(--spacing-md);
   }
-}
 
-@media (max-width: 1061px) {
-  .card {
-    width: 70%;
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .ingredients-title,
+  .instructions-title,
+  .nutrition-title {
+    font-size: 1.4rem;
+  }
+
+  .card-subtitle-div {
+    margin-left: calc(-1 * var(--spacing-md));
+    margin-right: calc(-1 * var(--spacing-md));
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
   }
 }
-@media (max-width: 925px) {
-  .card {
-    width: 90%; /* or 100%, or any value that fits better on smaller screens */
-  }
-  /* You can add more responsive styles here if needed */
-/* }  */

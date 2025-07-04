@@ -1,89 +1,266 @@
-# Frontend Mentor - Recipe page
+# Recipe Page - Frontend Mentor Challenge
 
-![Design preview for the Recipe page coding challenge](./preview.jpg)
+A responsive recipe page built with HTML and CSS for the Frontend Mentor challenge. This project displays a simple omelette recipe with preparation time, ingredients, instructions, and nutritional information.
 
-## Welcome! 👋
+## 📋 Table of Contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Documentation](#code-documentation)
+- [Responsive Design](#responsive-design)
+- [Browser Support](#browser-support)
+- [Contributing](#contributing)
+- [License](#license)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## 🎯 Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+This is a solution to the [Frontend Mentor Recipe Page challenge](https://www.frontendmentor.io/challenges/recipe-page-FdpiXDJQ). The goal was to build a responsive recipe page that matches the provided design files and works across different screen sizes.
 
-## The challenge
+### Design Files
 
-Your challenge is to build out this recipe page and get it looking as close to the design as possible.
+- `design/desktop-design.jpg` - Desktop layout reference
+- `design/mobile-design.jpg` - Mobile layout reference
+- `style-guide.md` - Design specifications and color palette
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## ✨ Features
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- **Responsive Design**: Adapts to desktop, tablet, and mobile screens
+- **Semantic HTML**: Proper use of HTML5 semantic elements
+- **Modern CSS**: Flexbox layout and CSS Grid for responsive design
+- **Typography**: Google Fonts integration (Outfit and Young Serif)
+- **Accessibility**: Alt text for images and semantic markup
+- **Preparation Time Section**: Full-width background section that extends beyond card boundaries
 
-## Where to find everything
+## 📁 Project Structure
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+```
+recipe-page-main/
+├── assets/
+│   ├── fonts/
+│   │   ├── outfit/          # Outfit font family
+│   │   └── young-serif/     # Young Serif font
+│   └── images/
+│       ├── favicon-32x32.png
+│       └── image-omelette.jpeg
+├── design/
+│   ├── desktop-design.jpg
+│   ├── mobile-design.jpg
+│   └── style-guide.md
+├── index.html              # Main HTML file
+├── style.css              # Main CSS file
+├── preview.jpg            # Project preview
+└── README.md              # This file
+```
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+## 🛠 Technologies Used
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Styling and responsive design
+- **Google Fonts**: Typography (Outfit and Young Serif)
+- **Flexbox**: Layout system for centering and alignment
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+## 🚀 Installation
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+1. Clone the repository:
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+   ```bash
+   git clone https://github.com/your-username/recipe-page.git
+   cd recipe-page
+   ```
 
-## Building your project
+2. Open the project:
+   - Open `index.html` in your web browser
+   - Or use a local development server
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## 📖 Usage
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+Simply open `index.html` in any modern web browser to view the recipe page. The page is fully responsive and will adapt to different screen sizes.
 
-## Deploying your project
+## 📚 Code Documentation
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### HTML Structure
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### Main Container
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```html
+<body class="overall-body">
+  <div class="card">
+    <!-- Recipe content -->
+  </div>
+</body>
+```
 
-## Create a custom `README.md`
+#### Key Sections
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+1. **Header**: Recipe image and title
+2. **Description**: Recipe overview
+3. **Preparation Time**: Full-width background section
+4. **Ingredients**: List of required ingredients
+5. **Instructions**: Step-by-step cooking instructions
+6. **Nutrition**: Nutritional information table
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### CSS Architecture
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+#### Layout System
 
-## Submitting your solution
+- **Flexbox**: Used for centering the main card and nutrition table layout
+- **Responsive Units**: Mix of px, rem, and % for different purposes
+- **Card-based Design**: Main content contained in a white card with rounded corners
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+#### Key CSS Classes
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+##### Layout Classes
 
-## Sharing your solution
+- `.overall-body`: Main container with background and centering
+- `.card`: Main content container with white background
+- `.card-img`: Recipe image styling
 
-There are multiple places you can share your solution:
+##### Content Classes
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+- `.card-title`: Main recipe title (Young Serif font)
+- `.card-description`: Recipe description text
+- `.card-subtitle-div`: Preparation time section with full-width background
+- `.Ingredients`, `.Instructions`, `.Nutrition`: Section containers
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+##### Typography Classes
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- `.card-title`, `.Ingredients-title`, `.Instructions-title`, `.Nutrition-title`: Section headings
+- `.card-description`, `.Nutrition-description`: Body text
+- `.Ingredients-list`, `.Instructions-list`: List styling
 
-## Got feedback for us?
+#### Color Scheme
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+```css
+/* Primary Colors */
+--color-primary: hsl(14, 45%, 36%); /* Brown text */
+--color-secondary: #991b47; /* Pink accent */
+--color-background: #f5f5dc; /* Beige background */
+--color-card-bg: #fff5f9; /* Light pink */
+--color-border: #f5f5dc; /* Border color */
+```
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+#### Typography
 
-**Have fun building!** 🚀
+- **Primary Font**: "Outfit" (sans-serif) - Used for body text and descriptions
+- **Secondary Font**: "Young Serif" (serif) - Used for headings and titles
+
+## 📱 Responsive Design
+
+### Breakpoints
+
+The design uses multiple breakpoints for responsive behavior:
+
+1. **Desktop (Default)**: 40% width card
+2. **Large Tablet (≤1061px)**: 70% width
+3. **Medium Tablet (≤1004px)**: 80% width
+4. **Small Tablet (≤925px)**: 90% width
+5. **Mobile (≤502px)**: 100px width (appears to be a typo)
+6. **Small Mobile (≤444px)**: Special preparation time section styling
+
+### Responsive Features
+
+- **Fluid Typography**: Font sizes adjust for different screen sizes
+- **Flexible Layout**: Card width adapts to screen size
+- **Mobile-First**: Preparation time section extends full-width on mobile
+- **Touch-Friendly**: Adequate spacing for mobile interaction
+
+### Media Queries
+
+```css
+@media (max-width: 444px) {
+  /* Small mobile adjustments */
+}
+
+@media (max-width: 502px) {
+  /* Mobile layout */
+}
+
+@media (max-width: 925px) {
+  /* Small tablet */
+}
+
+@media (max-width: 1004px) {
+  /* Medium tablet */
+}
+
+@media (max-width: 1061px) {
+  /* Large tablet */
+}
+```
+
+## 🎨 Design System
+
+### Spacing
+
+- **Small**: 6px, 10px, 20px
+- **Medium**: 25px, 30px, 35px
+- **Large**: 40px, 100px (margins)
+
+### Border Radius
+
+- **Default**: 14px for cards and images
+
+### Typography Scale
+
+- **Large Headings**: 35px (card title)
+- **Section Headings**: 25px
+- **Body Text**: 16px
+- **Small Text**: 11px (attribution)
+
+## 🌐 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🔧 Known Issues
+
+1. **Mobile Breakpoint**: The 502px breakpoint sets card width to 100px, which appears to be a typo
+2. **Font Weight**: Some font-weight declarations use `px` instead of numeric values
+3. **Inconsistent Units**: Mix of px, rem, and % without clear reasoning
+4. **Magic Numbers**: Hardcoded breakpoint values without semantic meaning
+
+## 🚀 Future Improvements
+
+- [ ] Fix mobile breakpoint typo (502px → 100%)
+- [ ] Consolidate media queries into logical breakpoints
+- [ ] Implement CSS custom properties for better maintainability
+- [ ] Add hover effects and transitions
+- [ ] Improve accessibility with ARIA labels
+- [ ] Add print styles
+- [ ] Implement dark mode
+- [ ] Add loading states and animations
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**x100-logical0z**
+
+- Frontend Mentor Profile: [@x100-logical0z](https://www.frontendmentor.io/profile/x100-logical0z)
+
+## 🙏 Acknowledgments
+
+- [Frontend Mentor](https://www.frontendmentor.io/) for the challenge
+- [Google Fonts](https://fonts.google.com/) for the typography
+- The Frontend Mentor community for feedback and support
+
+---
+
+**Note**: This is a solution to a Frontend Mentor challenge. The design files and requirements are provided by Frontend Mentor.
